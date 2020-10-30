@@ -22,9 +22,7 @@ client.on("ready", () => {
 client.on("message", (msg) => {
   log.log(msg);
   const parsed = parser.parse(msg, prefix, { allowSpaceBeforeCommand: true });
-
   if (!parsed.success) return;
-
   handleCommand(msg, parsed.command);
 });
 
